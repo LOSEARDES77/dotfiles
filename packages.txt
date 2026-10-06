@@ -50,5 +50,5 @@ slurp
 # --- Fuentes / cursor ---
 ttf-cascadia-code-nerd
 ttf-nerd-fonts-symbols
-ttf-material-symbols-variable-git
+ttf-material-symbols-variable
 bibata-cursor-theme-bin
