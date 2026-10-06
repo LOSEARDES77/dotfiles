@@ -1,0 +1,9 @@
+# Entorno de sesion (lo exporta uwsm a systemd y a todas las apps)
+export XCURSOR_SIZE=24
+export XCURSOR_THEME=Bibata-Modern-Ice
+export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=qt6ct
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export EDITOR=code-insiders
+export TERMINAL=kitty
+export PATH="$HOME/.vite-plus/js_runtime/node/24.19.0/bin:$HOME/.vite-plus/bin:$HOME/.bun/bin:$HOME/.nub/bin:$HOME/.local/share/pnpm:$HOME/.local/bin:$HOME/.local/share/zinit/polaris/bin:$HOME/.cargo/bin:$HOME/.fzf/bin:$HOME/.lmstudio/bin:$HOME/.dotnet/tools:$HOME/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:$PATH"

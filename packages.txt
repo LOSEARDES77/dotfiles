@@ -1,0 +1,53 @@
+# Paquetes que instala install.sh (repos oficiales + AUR, vía paru).
+# Una línea por paquete; '#' para comentarios.
+
+# --- Hyprland / sesión ---
+hyprland
+uwsm
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+hyprlock
+hypridle
+hyprpicker
+hyprshutdown
+hyprland-guiutils
+qt6ct
+polkit-gnome
+gnome-keyring
+nwg-displays
+
+# --- Shell (noctalia) ---
+noctalia
+cliphist
+wl-clipboard
+brightnessctl
+
+# --- Audio / media ---
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+playerctl
+
+# --- Terminal / shell ---
+kitty
+zsh
+git
+fzf
+zoxide
+lsd
+bat
+neovim
+
+# --- Apps de los binds ---
+nautilus
+gradia
+zen-browser-bin
+visual-studio-code-insiders-bin
+1password
+
+# --- Fuentes / cursor ---
+ttf-cascadia-code-nerd
+ttf-nerd-fonts-symbols
+ttf-material-symbols-variable-git
+bibata-cursor-theme-bin

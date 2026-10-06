@@ -1,0 +1,4 @@
+[hooks]
+# Se dispara una vez cuando Noctalia termina de arrancar (IPC listo = tray disponible).
+# Arranca el target de systemd que contiene las apps que necesitan system tray.
+started = "systemctl --user start noctalia-ready.target"
