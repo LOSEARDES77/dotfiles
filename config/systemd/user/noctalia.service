@@ -2,7 +2,6 @@
 Description=Noctalia shell
 PartOf=graphical-session.target
 After=graphical-session.target
-# Solo en Hyprland (en Niri se usa dms)
 ConditionEnvironment=XDG_CURRENT_DESKTOP=Hyprland
 
 [Service]

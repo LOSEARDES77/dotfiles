@@ -12,7 +12,6 @@ hyprpicker
 hyprshutdown
 hyprland-guiutils
 qt6ct
-polkit-gnome
 gnome-keyring
 nwg-displays
 
