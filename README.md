@@ -1,6 +1,6 @@
 # dotfiles
 
-Configs de Hyprland, Noctalia, kitty y zsh para Arch Linux.
+Mi configuracion personal de Hyprland, Noctalia, kitty y zsh para Arch Linux.
 
 ## Instalar en un equipo nuevo
 
