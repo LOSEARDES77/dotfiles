@@ -17,7 +17,7 @@ local function apply_rules(layout, skip_id)
         for j = 1, WORKSPACES_PER_MONITOR do
             local id = m.base + j
             if id ~= skip_id then
-                hl.workspace_rule({ workspace = tostring(id), monitor = m.name, layout = layout })
+                hl.workspace_rule({ workspace = tostring(id), monitor = m.name, layout = layout, default = j == 1 })
             end
         end
     end
@@ -137,6 +137,21 @@ local function apply_ws_monitors()
         end
     end
     apply_rules("scrolling")
+
+    -- Hyprland hands out workspaces 1, 2, ... to monitors on startup, so move any
+    -- monitor sitting on an empty workspace outside its range to its own first one
+    local start_monitor = hl.get_active_monitor()
+    for _, monitor in ipairs(hl.get_monitors()) do
+        local base = base_of(monitor)
+        local ws = monitor.active_workspace
+        if base and ws and ws.is_empty and (ws.id <= base or ws.id > base + WORKSPACES_PER_MONITOR) then
+            hl.dispatch(hl.dsp.focus({ monitor = monitor.name }))
+            hl.dispatch(hl.dsp.focus({ workspace = base + 1, on_current_monitor = true }))
+        end
+    end
+    if start_monitor then
+        hl.dispatch(hl.dsp.focus({ monitor = start_monitor.name }))
+    end
 
     for i = 1, WORKSPACES_PER_MONITOR do
         local key = i % WORKSPACES_PER_MONITOR -- 10 maps to key 0
