@@ -44,6 +44,8 @@ gradia
 zen-browser-bin
 visual-studio-code-insiders-bin
 1password
+grim
+slurp
 
 # --- Fuentes / cursor ---
 ttf-cascadia-code-nerd

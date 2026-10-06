@@ -36,6 +36,12 @@ hl.window_rule({
     size  = { 1080, 920 },
 })
 
+hl.window_rule({
+    match  = { class = "^be\\.alexandervanhee\\.gradia$" },
+    float  = true,
+    center = true,
+})
+
 -- Focus on urgent request
 hl.on("window.urgent", function(w)
     if w.class == nil or w.layershell then

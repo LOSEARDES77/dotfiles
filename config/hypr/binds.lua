@@ -7,6 +7,13 @@ hl.bind("ALT + V", hl.dsp.window.float("activewindow"))
 -- Screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("gradia --screenshot=INTERACTIVE"))
 
+-- Esc closes gradia; only enabled while it is focused so Esc keeps working elsewhere
+local gradia_esc = hl.bind("Escape", hl.dsp.window.close("activewindow"))
+gradia_esc:set_enabled(false)
+hl.on("window.active", function(w)
+    gradia_esc:set_enabled(w ~= nil and w.class == "be.alexandervanhee.gradia")
+end)
+
 -- Switch monitors
 hl.bind("SUPER + GRAVE", hl.dsp.focus({ monitor = "+1" }))
 hl.bind("SUPER + SHIFT + GRAVE", hl.dsp.window.move({ monitor = "+1" }))
