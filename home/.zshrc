@@ -7,7 +7,7 @@ fi
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-PATH=$PATH:/home/loseardes77/.cargo/bin:/home/loseardes77/.fzf/bin
+PATH=$PATH:$HOME/.cargo/bin:$HOME/.fzf/bin
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -94,11 +94,11 @@ export PATH=$HOME/.local/bin:$PATH
 
 export NIX_CONFIG="experimental-features = nix-command flakes"
 
-if [ -e /home/loseardes77/.nix-profile/etc/profile.d/nix.sh ]; then . /home/loseardes77/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/loseardes77/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
@@ -107,9 +107,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=$PATH:/home/loseardes77/.spicetify
 export PATH=$PATH:~/.spicetify
 eval "$(netbird completion zsh)"
 
 # bun completions
-[ -s "/home/loseardes77/.bun/_bun" ] && source "/home/loseardes77/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

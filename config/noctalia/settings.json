@@ -367,7 +367,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/loseardes77/.face",
+        "avatarImage": "~/.face",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -632,7 +632,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/loseardes77/Pictures/Wallpapers",
+        "directory": "~/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
